@@ -12,11 +12,15 @@ public class Datentypen {
 		boolean bo;
 		char ch;
 		
-		byte b;
+		byte b; // 8bit, -128 ... +127 
 		short s;
 		long y;
 		float f;
 		double d;
+		
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(Integer.MIN_VALUE);
+		
 	}
 
 }
