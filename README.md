@@ -23,3 +23,10 @@ System.out.println( true | f() );   // true, f() wird aufgerufen
 System.out.println( false && f() ); // false, f() wird nicht aufgerufen
 
 System.out.println( false & f() );  // false, f() wird aufgerufen
+
+### Der Rang der Operatoren in der Auswertungsreihenfolge
+Tabelle 2.11: Operatoren mit Rangordnung in Java
+
+Druckfehler:
+*=, /=, %=, +=, ?=, <<=, >>=, >>>=, &=, ^=, |= 	14 	jeder 	Zuweisung mit Operation 
+---------------- ?= müsste -= heissen
