@@ -5,9 +5,9 @@ public class BezeichnerIdentifier {
 		int myVariable_Eins;
 		int _ = 5;
 		int x12 = 6;
-		// Währungssymbole !!!
+		// Wï¿½hrungssymbole !!!
 		int x$ = 6;
-		int x€ = 7;
+		int xâ‚¬ = 7;
 		int $hallo = 5;
 	}
 }
