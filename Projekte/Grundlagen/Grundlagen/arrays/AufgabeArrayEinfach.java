@@ -9,7 +9,7 @@ public class AufgabeArrayEinfach {
 
 	public int[] createArray(int from, int to, int size){
 		int result[] = new int[size];
-		for (int ii = 1; ii< result.length; ii++) {
+		for (int ii = 0; ii< result.length; ii++) {
 			result[ii] = this.r.nextInt(to-from+1);
 		}
 		return result;
@@ -17,7 +17,12 @@ public class AufgabeArrayEinfach {
 
 	public void printArray(int[] array){
 		for (int ii = 0; ii< array.length; ii++) {
-			System.out.print(array[ii]+ " ");
+			System.out.print(array[ii] + " ");
+		}
+		System.out.println(" ");
+		// Alternativer Syntax für Zugriff auf alle Feld-Elemente
+		for (int ii: array ) {
+			System.out.print(ii + " ");
 		}
 	}
 
