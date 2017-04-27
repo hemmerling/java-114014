@@ -1,4 +1,4 @@
-package variablen;
+package grundlagen.variablen;
 
 public class Datentypen {
 

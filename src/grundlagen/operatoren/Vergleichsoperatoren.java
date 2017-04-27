@@ -1,4 +1,4 @@
-package operatoren;
+package grundlagen.operatoren;
 
 public class Vergleichsoperatoren {
 

@@ -1,4 +1,4 @@
-package arrays;
+package grundlagen.arrays;
 
 public class AufgabeArrayHafen {
 

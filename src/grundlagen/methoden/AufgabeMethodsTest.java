@@ -1,12 +1,9 @@
-package methoden;
+package grundlagen.methoden;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import kontrollstrukturen.AufgabeFor;
-import methoden.AufgabeMethods;
 
 public class AufgabeMethodsTest {
 

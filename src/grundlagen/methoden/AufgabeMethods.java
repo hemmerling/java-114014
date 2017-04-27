@@ -1,6 +1,5 @@
-package methoden;
+package grundlagen.methoden;
 
-import kontrollstrukturen.AufgabeFor;
 import java.util.Random;
 
 public class AufgabeMethods {

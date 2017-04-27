@@ -1,4 +1,4 @@
-package arrays;
+package grundlagen.arrays;
 
 import static org.junit.Assert.*;
 

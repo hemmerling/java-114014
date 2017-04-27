@@ -1,4 +1,4 @@
-package person;
+package klassen.person;
 
 public class AufgabePerson {
 

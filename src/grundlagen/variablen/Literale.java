@@ -1,4 +1,4 @@
-package variablen;
+package grundlagen.variablen;
 
 public class Literale {
 
@@ -8,17 +8,17 @@ public class Literale {
 		int i2 = +12;
 		int i3 = -12;
 		
-		int i4 = 0x20;  // hexadezimal => führend 0x
+		int i4 = 0x20;  // hexadezimal => fï¿½hrend 0x
 		System.out.println(i4);
-		int i5 = 020;  // oktal => führende 0, SELTEN
+		int i5 = 020;  // oktal => fï¿½hrende 0, SELTEN
 		System.out.println(i5);
-		int i6 = 0b00100001; // seit Java 7, binär
+		int i6 = 0b00100001; // seit Java 7, binï¿½r
 		System.out.println(i6);
 		int i7 = 1_000_000; // seit Java 7, 1000er Stellen trennen
 		System.out.println(i6);
 		
 		long l1 =  12;
-		//long l2 = 12345678901; // zu großer Int-Literal
+		//long l2 = 12345678901; // zu groï¿½er Int-Literal
 		long l3 = 12345678901L; // Long-Literal mit "l" oder "L"
 		long l4 = 12345678901l; // Long-Literal mit "l" oder "L"
 		

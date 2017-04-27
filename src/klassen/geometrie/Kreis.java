@@ -1,4 +1,4 @@
-package geometrie;
+package klassen.geometrie;
 
 public class Kreis {
 

@@ -1,4 +1,4 @@
-package kontrollstrukturen;
+package grundlagen.kontrollstrukturen;
 
 import static org.junit.Assert.*;
 

@@ -1,4 +1,4 @@
-package geometrie;
+package klassen.geometrie;
 
 import static org.junit.Assert.*;
 

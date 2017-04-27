@@ -1,4 +1,4 @@
-package variablen;
+package grundlagen.variablen;
 
 public class BezeichnerIdentifier {
 	public static void main(String[] args){

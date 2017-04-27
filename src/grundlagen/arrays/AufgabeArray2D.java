@@ -1,4 +1,4 @@
-package arrays;
+package grundlagen.arrays;
 import java.util.Arrays;
 
 public class AufgabeArray2D {

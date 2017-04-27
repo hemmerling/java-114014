@@ -1,4 +1,4 @@
-package arrays;
+package grundlagen.arrays;
 
 //import java.lang.Math;
 import java.util.Random;

@@ -1,11 +1,9 @@
-package geometrie;
+package klassen.geometrie;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import kontrollstrukturen.AufgabeWhile;
 
 public class KreisTest {
 

@@ -1,4 +1,4 @@
-package geometrie;
+package klassen.geometrie;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,10 +1,7 @@
-package methoden;
+package grundlagen.methoden;
 
 import java.util.LinkedList;
 import java.util.Queue;
-
-import geometrie.AufgabeGeometrie;
-import geometrie.Rechteck;
 
 public class AufgabeKontrollfragen {
 
