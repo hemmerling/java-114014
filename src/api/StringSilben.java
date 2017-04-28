@@ -26,10 +26,29 @@ public class StringSilben {
 		return result;
 	}
 	
-	public static void main(String[] args) {
+	public long profile1(int amount) {
 		StringSilben stringSilben = new StringSilben();
-		System.out.println(stringSilben.generiere1(stringSilben.arrayMitSilben, 4));
-		System.out.println(stringSilben.generiere1(stringSilben.arrayMitSilben, 4).toString());
+		long currentTime = System.currentTimeMillis();	
+		stringSilben.generiere1(stringSilben.arrayMitSilben, amount);
+		long duration = System.currentTimeMillis() - currentTime;
+		return duration;
+	}
+
+	public long profile2(int amount) {
+		StringSilben stringSilben = new StringSilben();
+		long currentTime = System.currentTimeMillis();	
+		stringSilben.generiere1(stringSilben.arrayMitSilben, amount).toString();
+		long duration = System.currentTimeMillis() - currentTime;
+		return duration;
+	}
+	
+	public static void main(String[] args) {
+		int amount = 1000;
+		StringSilben stringSilben = new StringSilben();
+		System.out.println(stringSilben.generiere1(stringSilben.arrayMitSilben, amount) + 
+				           " , #Zeitdauer: " + stringSilben.profile1(amount));
+		System.out.println(stringSilben.generiere1(stringSilben.arrayMitSilben, amount).toString() + 
+				           " , #Zeitdauer: " + stringSilben.profile2(amount));
 		// TODO Auto-generated method stub
 
 	}
