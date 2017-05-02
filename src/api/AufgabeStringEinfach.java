@@ -1,7 +1,7 @@
 package api;
 import java.lang.StringBuilder;
 
-public class StringEinfach {
+public class AufgabeStringEinfach {
 
 	private String aString = "Java ist toll";
 	private String[] aFilenameArray = { "hello.txt", "hello.TXT", "hello.", 
@@ -22,7 +22,7 @@ public class StringEinfach {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		StringEinfach stringEinfach = new StringEinfach();
+		AufgabeStringEinfach stringEinfach = new AufgabeStringEinfach();
 		System.out.println(stringEinfach.reverseString(stringEinfach.aString));
 		for (String ii: stringEinfach.aFilenameArray) {
 			System.out.println(ii + " ist der Name einer Textdatei? " + 

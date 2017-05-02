@@ -1,6 +1,6 @@
 package api;
 
-public class StringBuilderEinfach {
+public class AufgabeStringBuilderEinfach {
 
     private String s1 = "Hello";
     private String s2 = " ";
@@ -25,7 +25,7 @@ public class StringBuilderEinfach {
 	}
 	
 	public static void main(String[] args) {
-		StringBuilderEinfach stringBuilderEinfach = new StringBuilderEinfach();
+		AufgabeStringBuilderEinfach stringBuilderEinfach = new AufgabeStringBuilderEinfach();
 		int amount = 4;
 		System.out.println(stringBuilderEinfach.stringBuilder1(stringBuilderEinfach.s1,
  				   											   stringBuilderEinfach.s2, 

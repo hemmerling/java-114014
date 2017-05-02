@@ -7,9 +7,9 @@ import org.junit.Test;
 
 import grundlagen.arrays.Schiff;
 
-public class StringEinfachTest {
+public class AufgabeStringEinfachTest {
 
-	StringEinfach stringEinfach = new StringEinfach();
+	AufgabeStringEinfach stringEinfach = new AufgabeStringEinfach();
 	private String[] aFilenameArray = {"hello.txt", "hello.TXT", "hello.", 
 									   "hello.t", "hello.bat"};
 	private boolean[] aIsFilenameArray = {true, true, false, false, false};
@@ -29,7 +29,7 @@ public class StringEinfachTest {
 	@Test
 	public void testStringTextfile() {
 		String expectedSubstring = ".txt";
-		StringEinfachTest stringEinfachTest = new StringEinfachTest();
+		AufgabeStringEinfachTest stringEinfachTest = new AufgabeStringEinfachTest();
 		for (int ii = 0; ii< stringEinfachTest.aFilenameArray.length; ii++) {
 			boolean expected = stringEinfachTest.aIsFilenameArray[ii];
 			assertEquals(ii + " ist der Name einer Textdatei?", expected, 

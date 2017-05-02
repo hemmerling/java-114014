@@ -1,6 +1,6 @@
 package api;
 
-public class StringMethoden {
+public class AufgabeStringMethoden {
 
 	private String a = "Hello";
 	private String b = "World";
@@ -8,7 +8,8 @@ public class StringMethoden {
 	public void stringMethoden1() {
 		System.out.println(a.concat(b));
 		System.out.println(a+b);
-	    //Kann man concat durch den Konkatenationsoperator (+) ersetzen?
+	    // Kann man concat durch den Konkatenationsoperator (+) ersetzen?
+		// http://stackoverflow.com/questions/693597/is-there-a-difference-between-string-concat-and-the-operator-in-java
 		System.out.println(a.charAt(1));
 		System.out.println(a.length());
 		System.out.println(a.isEmpty());
@@ -34,28 +35,28 @@ public class StringMethoden {
 		System.out.println(a.substring(1,3));
 	}
 
-	public void statischeMethoden1() {
-		boolean b = 0b01;
-		System.out.println(valueOf(b));
+	public void statischeStringMethoden1() {
+		boolean b = true;
+		System.out.println(String.valueOf(b));
 		char c = 'c';
-		System.out.println(valueOf(c));
-		char[] cc = { '1', '2' }:
-    	System.out.println(valueOf(cc));
+		System.out.println(String.valueOf(c));
+		char[] cc = { '1', '2' };
+    	System.out.println(String.valueOf(cc));
 		double d = 12.4;
-		System.out.println(valueOf(d));
+		System.out.println(String.valueOf(d));
 		double f = 12.4f;
-		System.out.println(valueOf(f));
+		System.out.println(String.valueOf(f));
 		int i = 12;
-		System.out.println(valueOf(i));
+		System.out.println(String.valueOf(i));
 		long l = 12;
-		System.out.println(valueOf(l));
+		System.out.println(String.valueOf(l));
 		long o = 12;
-		System.out.println(valueOf(o));
+		System.out.println(String.valueOf(o));
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		StringMethoden stringMethoden = new StringMethoden();
+		AufgabeStringMethoden stringMethoden = new AufgabeStringMethoden();
 		stringMethoden.stringMethoden1();
 	}
 

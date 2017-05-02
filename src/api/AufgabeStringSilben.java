@@ -1,7 +1,7 @@
 package api;
 import java.util.Random;
 
-public class StringSilben {
+public class AufgabeStringSilben {
 
 	private Random rand = new Random();
 	private String[] arrayMitSilben = { "pro", "gi", "idre", "hier", "die", 
@@ -27,7 +27,7 @@ public class StringSilben {
 	}
 	
 	public long profile1(int amount) {
-		StringSilben stringSilben = new StringSilben();
+		AufgabeStringSilben stringSilben = new AufgabeStringSilben();
 		long currentTime = System.currentTimeMillis();	
 		stringSilben.generiere1(stringSilben.arrayMitSilben, amount);
 		long duration = System.currentTimeMillis() - currentTime;
@@ -35,7 +35,7 @@ public class StringSilben {
 	}
 
 	public long profile2(int amount) {
-		StringSilben stringSilben = new StringSilben();
+		AufgabeStringSilben stringSilben = new AufgabeStringSilben();
 		long currentTime = System.currentTimeMillis();	
 		stringSilben.generiere1(stringSilben.arrayMitSilben, amount).toString();
 		long duration = System.currentTimeMillis() - currentTime;
@@ -44,7 +44,7 @@ public class StringSilben {
 	
 	public static void main(String[] args) {
 		int amount = 1000;
-		StringSilben stringSilben = new StringSilben();
+		AufgabeStringSilben stringSilben = new AufgabeStringSilben();
 		System.out.println(stringSilben.generiere1(stringSilben.arrayMitSilben, amount) + 
 				           " , #Zeitdauer: " + stringSilben.profile1(amount));
 		System.out.println(stringSilben.generiere1(stringSilben.arrayMitSilben, amount).toString() + 
