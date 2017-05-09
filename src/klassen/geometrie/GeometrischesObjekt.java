@@ -1,9 +1,9 @@
 package klassen.geometrie;
 
-public class GeometrischesObjekt {
+public /* abstract */ class GeometrischesObjekt {
 
-	 private int x = 0;
-	 private int y = 0;
+	 public int x = 0;
+	 public int y = 0;
 	 public String name = "Geometrisches Objekt";
 	 
 	 public GeometrischesObjekt(){
@@ -32,6 +32,10 @@ public class GeometrischesObjekt {
 		String result = coordinates[0] + " " + coordinates[1]; 
 		return result;
 	}
+	
+	// public abstract int getFlaeche1();
+	
+	
 	public String getName() {
 		return this.name;
 	}

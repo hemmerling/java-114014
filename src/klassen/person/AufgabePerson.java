@@ -14,6 +14,9 @@ public class AufgabePerson {
 	    System.out.println ( person1.getVorname() + " " + person1.getNachname() + 
 	    					 ", Geburtsjahr:" + person1.getGeburtsjahr() + 
 	    					 ", Plz: " + person1.getPostleitzahl());
+
+		Personen personen1 = new Personen();
+
 	}
 
 }

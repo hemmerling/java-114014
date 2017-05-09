@@ -21,4 +21,13 @@ public class RechteckTest {
 	    assertEquals("1. Rechteck (2 X 4)", expected, rechteck.getMasze().toString());
 	}
 
+	@Test
+	public void testRechteckFlaeche() {
+		int breite = 5;
+		int hoehe = 3;
+		int expected = breite*hoehe;
+		Rechteck rechteck = new Rechteck(breite, hoehe);
+        assertEquals("Rechteckfläche", expected, rechteck.getFlaeche());
+	}
+
 }

@@ -3,7 +3,7 @@ package klassen.geometrie;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Rechteck extends GeometrischesObjekt {
+public class Rechteck extends GeometrischesObjekt implements FlaechenObjekt {
 	
 	private int hoehe;
 	private int breite;
@@ -39,8 +39,14 @@ public class Rechteck extends GeometrischesObjekt {
 		return masze;
 	}
 
+	public int getFlaeche(){
+		return this.hoehe * this.breite;
+	}
+	
 	public static void main(String[] args) {
-		Rechteck rechteck = new Rechteck(5,3);
+		int breite = 5;
+		int hoehe = 3;
+		Rechteck rechteck = new Rechteck(breite, hoehe);
 		rechteck.name = "Rechteck";
 		System.out.println(rechteck.getMasze());
 		rechteck = new Rechteck(2,4);
