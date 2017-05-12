@@ -1,7 +1,7 @@
 package klassen.person;
 
-public class Person implements Comparable<Person>{
-
+public class Person implements Comparable<Person> {
+	
 	private String vorname, nachname, postleitzahl;
 	private int geburtsjahr;
 	
