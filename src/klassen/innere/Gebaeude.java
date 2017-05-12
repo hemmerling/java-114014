@@ -35,8 +35,7 @@ public class Gebaeude {
 			return "Stockwerk " + nummer + " / " + strasse + " " + Gebaeude.this.nummer;
 		}
 	
-		// Raum was allowed to be static class, until now
-		public /* static */ class Raum {
+		public class Raum {
 			private int nummer;
 			
 			public Raum(int nummer) {
@@ -63,8 +62,7 @@ public class Gebaeude {
 
 		@Override
 		public String toString() {
-			String result = "Raum " + nummer; 
-			return result;
+			return "Raum " + nummer; 
 		}
 	}
 	
@@ -89,6 +87,10 @@ public class Gebaeude {
 		return this.stockwerke[stockwerkNr].raeume2[raumNr];
 	}
 
+	public Stockwerk.Raum getRaum(int stockwerkNr, int raumNr) {
+		return this.stockwerke[stockwerkNr].raeume[raumNr];
+	}
+
 	@Override
 	public String toString(){
 		return "Gebäude";    	
@@ -98,6 +100,7 @@ public class Gebaeude {
 		Gebaeude gebaeude = new Gebaeude ("Hauptstr", "45", 3 , 10);
 		System.out.println(gebaeude.getRaum2(0, 2));
 		System.out.println(gebaeude.getStockwerk(0));
+		System.out.println(gebaeude.getRaum(0, 2));
 
 		// TODO Auto-generated method stub
 
