@@ -2,20 +2,6 @@ package klassen.person;
 
 import java.util.Iterator;
 
-//Top-Level Klasse
-class fi3 implements FilterInterface {
-	Person person;
-	public fi3(Person person){
-		this.person = person;
-	}
-
-	public boolean accept(Person person){
-		boolean result;
-		result = this.person.getGeburtsjahr() >= person.getGeburtsjahr();
-		return result;
-	}
-}
-
 // Top-Level Klasse
 class Filter3 {
 
@@ -40,20 +26,6 @@ public class PersonenListe implements Iterable<Person> {
 	private static final int MAX_CAPACITY = 4;
 	private int nextFreePos = 0;
 	private Person[] personen = new Person[MAX_CAPACITY];
-
-	// Innere Klasse
-	class fi2 implements FilterInterface {
-		Person person;
-		public fi2(Person person){
-			this.person = person;
-		}
-
-		public boolean accept(Person person){
-			boolean result;
-	      	result = person.getNachname().contains(this.person.getNachname());
-			return result;
-		}
-	}
 	
 	// Innere Klasse
 	public static class Filter2 {
@@ -165,15 +137,7 @@ public class PersonenListe implements Iterable<Person> {
 		for(Person person : personenGefiltert) {
 			System.out.println("Gefilterte Person: "+person);
 		}
-		
-		// Anonyme Klasse
-		FilterInterface fi1 = new FilterInterface() {
-			public boolean accept(Person person){
-				boolean result;
-		      	result = person.getGeburtsjahr() >= 1960;
-				return result;
-			}			
-		};
+
 			
 	}
 

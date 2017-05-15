@@ -2,19 +2,19 @@
 java-114014
 
 ## 2017-04-11
-### Oracle's Prüfung 
-basiert darauf, dass der Prüflung den Compiler spielt, und sonst vom Compiler gefundene Fehler selber findet...
+### Oracle's PrÃ¼fung 
+basiert darauf, dass der PrÃ¼flung den Compiler spielt, und sonst vom Compiler gefundene Fehler selber findet...
 
 ### Zuweisungen
-Zwar finden sich Zuweisungen oft als Ausdrucksanweisung wieder, doch können sie an jeder Stelle stehen, an der ein Ausdruck erlaubt ist, etwa in einem Methodenaufruf wie print()
+Zwar finden sich Zuweisungen oft als Ausdrucksanweisung wieder, doch kï¿½nnen sie an jeder Stelle stehen, an der ein Ausdruck erlaubt ist, etwa in einem Methodenaufruf wie print()
 
 Zuweisungen der Form a = b = c = 0; sind erlaubt und gleichbedeutend mit den drei Anweisungen c = 0; b = c; a = b;. 
 
 ### Verbundoperator
-Besondere Obacht sollten wir auf die automatische Klammerung geben. Bei einem Ausdruck wie a *= 3 + 5 gilt a = a * (3 + 5) und nicht selbstverständlich die Punkt-vor-Strich-Regelung a = a * 3 + 5. 
+Besondere Obacht sollten wir auf die automatische Klammerung geben. Bei einem Ausdruck wie a *= 3 + 5 gilt a = a * (3 + 5) und nicht selbstverstï¿½ndlich die Punkt-vor-Strich-Regelung a = a * 3 + 5. 
 
 ### Nicht-Kurzschluss-Operatoren
-In einigen Fällen ist es erwünscht, dass die Laufzeitumgebung alle Teilausdrücke auswertet. Das kann der Fall sein, wenn Methoden Nebenwirkungen haben sollen, etwa Zustände ändern. Daher bietet Java zusätzlich die nicht über einen Kurzschluss arbeitenden Operatoren | und & an, die eine Auswertung aller Teilausdrücke erzwingen. 
+In einigen Fï¿½llen ist es erwÃ¼nscht, dass die Laufzeitumgebung alle TeilausdrÃ¼cke auswertet. Das kann der Fall sein, wenn Methoden Nebenwirkungen haben sollen, etwa ZustÃ¤nde  Ã¤ndern. Daher bietet Java zusÃ¤tzlich die nicht  Ã¼ber einen Kurzschluss arbeitenden Operatoren | und & an, die eine Auswertung aller TeilausdrÃ¼cke erzwingen. 
 
 System.out.println( true || f() );  // true, f() wird nicht aufgerufen
 
@@ -29,4 +29,10 @@ Tabelle 2.11: Operatoren mit Rangordnung in Java
 
 Druckfehler:
 *=, /=, %=, +=, ?=, <<=, >>=, >>>=, &=, ^=, |= 	14 	jeder 	Zuweisung mit Operation 
----------------- ?= müsste -= heissen
+---------------- ?= mï¿½sste -= heissen
+
+### Sichtbarkeiten
+public = sichtbar in allen Packages
+protected = sichtbar im selben Package und abgeleiteten Klassen ( auch in anderen Paketen )
+(default / package privatge ) = sichbar im selben Package
+private = sichtbar nur in der Klasse ( in der das private-Element definiert wurde )
