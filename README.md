@@ -36,3 +36,8 @@ public = sichtbar in allen Packages
 protected = sichtbar im selben Package und abgeleiteten Klassen ( auch in anderen Paketen )
 (default / package privatge ) = sichbar im selben Package
 private = sichtbar nur in der Klasse ( in der das private-Element definiert wurde )
+
+### Import
+import = importiert Topleveltypen aus einem Package
+import static = importiert statische Elemente aus einer Klasse ( aus einem Topleveltyp ). Es gibt kein Paket mit dem Namen!
+
