@@ -7,6 +7,10 @@ public class Muenze {
 	MuenzenMedallie muenzenMedallie;
 	public final double muenzwert;
 
+	public double getMuenzwert() {
+		return muenzwert;
+	}
+
 	Muenze(MuenzenMedallie muenzenMedallie) {
 	this.muenzenMedallie = muenzenMedallie;
 	switch (muenzenMedallie) {

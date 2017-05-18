@@ -10,6 +10,10 @@ public class KaffeeAngebot {
 	KaffeeSorte kaffeeSorte;
 	public final double preis;
 
+	public double getPreis() {
+		return preis;
+	}
+
 	KaffeeAngebot() {
 		this.preis = 0;
 	}
@@ -30,7 +34,7 @@ public class KaffeeAngebot {
 			preis = 0;
 		}
 	}
-		
+	
 	@Override
 	public String toString() {
 		return  this.kaffeeSorte + " = " + this.preis + " EUR";
