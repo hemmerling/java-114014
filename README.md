@@ -41,3 +41,6 @@ private = sichtbar nur in der Klasse ( in der das private-Element definiert wurd
 import = importiert Topleveltypen aus einem Package
 import static = importiert statische Elemente aus einer Klasse ( aus einem Topleveltyp ). Es gibt kein Paket mit dem Namen!
 
+## File I/O
+import java.io.File = traditionelle File I/O API
+import import java.nio.file.* = neue Java7 I/O API mit FileSystem und Path :-)
