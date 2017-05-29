@@ -27,7 +27,7 @@ public class FileCounter {
 
 	private FileFilter fileFilter = new FileFilter() {
 		public boolean accept(File pathname) {
-			return pathname.isFile() && pathname.toString().endsWith("."+aTextFilter);
+			return pathname.isFile() && pathname.toString().toLowerCase().endsWith("."+aTextFilter);
 		}
 	};
 
@@ -104,7 +104,6 @@ public class FileCounter {
 		System.out.println(numberOfFiles);
 		numberOfFiles = fileCounter.countDeep("exe");
 		System.out.println(numberOfFiles);
-
 		// TODO Auto-generated method stub
 
 	}
