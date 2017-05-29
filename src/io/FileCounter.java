@@ -5,28 +5,33 @@ import java.io.FileFilter;
 
 public class FileCounter {
 
-	String pathString;
-	String aTextFilter;
-	File directory;
+	private String pathString;
+	private String aTextFilter;
+	private File directory;
+	
+	/*
+	 *  Idee Testverzeichnis anzulegen, 
+	 *  um für UnitTest durchführung zu wissen, was das Ergebnis ist
+	 */
 	
 	/*
 	 *  - Erzeugen Sie in der main-Methode der Klasse Test ein Objekt vom Typ 'FilesCounter':
 	 * FilesCounter fc = new FilesCounter("C:\\Windows");
 	 * Dabei wird als Argument ein Verzeichnisname übergeben.
 	 */
-	FileCounter( String pathString ){
+	public FileCounter( String pathString ){
 		this.pathString = pathString;
-		this.directory = new File(pathString);
+			this.directory = new File(pathString);		
 	}
 	
 
-	FileFilter filter1 = new FileFilter() {
+	private FileFilter fileFilter = new FileFilter() {
 		public boolean accept(File pathname) {
 			return pathname.isFile() && pathname.toString().endsWith("."+aTextFilter);
 		}
 	};
 
-	FileFilter filter2 = new FileFilter() {
+	private FileFilter directoryFilter = new FileFilter() {
 		public boolean accept(File pathname) {
 			return pathname.isDirectory();
 		}
@@ -40,11 +45,23 @@ public class FileCounter {
 	public int count (String aTextFilter) {
 		int result = 0;
 		this.aTextFilter = aTextFilter;
-		File[] fileList = directory.listFiles(filter1);
+		File[] fileList = directory.listFiles(fileFilter);
+		try {
+			result = fileList.length;
+		} catch ( Exception e ) {
+			System.err.println("Illegal Path - Path doesnt´exist");
+		}
+		return result;
+	}	
+
+	public int count2 (String aTextFilter) throws Exception {
+		int result = 0;
+		this.aTextFilter = aTextFilter;
+		File[] fileList = directory.listFiles(fileFilter);
 		result = fileList.length;
 		return result;
 	}	
-	
+
 	
 	/*
 	 *  Optional. Folgender Aufruf muss rekursiv die Dateien im Verzeichnis "C:\\Windows" 
@@ -54,14 +71,14 @@ public class FileCounter {
 	public int countDeep2 (File directory) {
 		int result = 0;
 		this.aTextFilter = aTextFilter;
-		File[] fileList = directory.listFiles(filter1);
+		File[] fileList = directory.listFiles(fileFilter);
 		if (fileList != null) {
 			/* Lesbares Verzeichnis.
 			 * Achtung unter Windows7 und später gibts unlesbare Verzeichnisse 
 			 * z.b. Unterordner unter C:\\Windows 
 			 */
 			result = fileList.length;
-			File[] directoryList = directory.listFiles(filter2);
+			File[] directoryList = directory.listFiles(directoryFilter);
 			for (File ii:directoryList){
 				result +=countDeep2(ii);
 			}
