@@ -29,7 +29,9 @@ public class FileReading {
 			
 		} finally {
 			try {
-				input.close(); //flush läuft bei close automatisch
+				if (input != null) {			
+					input.close(); //flush läuft bei close automatisch
+				}
 			} catch (IOException e) {
 				System.err.println("Fehler! Kann die Datei nicht schliessen");
 			}
