@@ -24,7 +24,7 @@ public class FileCopy {
 							    String copyFilePath, boolean append)  {
 		boolean result = true;
 		BufferedReader in=null;
-		Writer out = null;
+		BufferedWriter out = null;
 
 		FileReader in2=null;
 		if (!append) {
@@ -57,7 +57,7 @@ public class FileCopy {
 				String line;
 				
 				while( (line = in.readLine()) != null ) {
-					out.write(line+"\n");
+					out.newLine();
 					//System.out.println(line);
 				}
 	
