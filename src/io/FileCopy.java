@@ -68,6 +68,8 @@ public class FileCopy {
 				try {
 					if(in!=null) {
 						in.close();
+					}
+					if(out!=null) {
 						out.close(); //flush läuft bei close automatisch
 					}
 				} catch (IOException e) {
