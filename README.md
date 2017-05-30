@@ -5,6 +5,12 @@ java-114014
 ### Oracle's Prüfung 
 basiert darauf, dass der Prüflung den Compiler spielt, und sonst vom Compiler gefundene Fehler selber findet...
 
+
+### Character
+Einzelne Zeichen werden in Java durch den Datentyp char dargestellt. Er repräsentiert ein Unicode-Zeichen mit der Länge 16 bit. Wird einer Variable vom Typ char eine Konstante (auch Literal genannt) zugewiesen, muss diese in einfachen Anführungszeichen stehen.
+
+Bei klassischem K&R C: char = 1 Byte;
+
 ### Zuweisungen
 Zwar finden sich Zuweisungen oft als Ausdrucksanweisung wieder, doch k�nnen sie an jeder Stelle stehen, an der ein Ausdruck erlaubt ist, etwa in einem Methodenaufruf wie print()
 
