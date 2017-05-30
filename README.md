@@ -50,3 +50,5 @@ import static = importiert statische Elemente aus einer Klasse ( aus einem Tople
 ## File I/O
 import java.io.File = traditionelle File I/O API
 import import java.nio.file.* = neue Java7 I/O API mit FileSystem und Path :-)
+
+Welche Methode gibt es in den Klassen "BufferedReader", "BufferedWriter", die es nicht in "Filereader", "FileWriter" gibt? Antwort: readLine(), newLine().

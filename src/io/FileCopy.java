@@ -57,8 +57,9 @@ public class FileCopy {
 				String line;
 				
 				while( (line = in.readLine()) != null ) {
+					out.write(line);
 					out.newLine();
-					//System.out.println(line);
+					System.out.println(line);
 				}
 	
 			} catch (IOException e) {
