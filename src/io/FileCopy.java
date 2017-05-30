@@ -69,11 +69,15 @@ public class FileCopy {
 					if(in!=null) {
 						in.close();
 					}
+				} catch (IOException e) {
+					System.out.println("Fehler! Die zu lesene Datei konnten nicht geschlossen werden");
+				}
+				try {
 					if(out!=null) {
 						out.close(); //flush läuft bei close automatisch
 					}
 				} catch (IOException e) {
-					System.out.println("Fehler! Die Dateien konnten nicht geschlossen werden");
+					System.out.println("Fehler! Die zu schreibende Datei konnten nicht geschlossen werden");
 				}
 			
 			}
