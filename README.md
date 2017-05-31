@@ -6,6 +6,9 @@ java-114014
 basiert darauf, dass der Prüflung den Compiler spielt, und sonst vom Compiler gefundene Fehler selber findet...
 
 
+### Static
+Wenn man aus der static-Methode "main" andere Methoden der Klasse ohne Erzeugung einer Instanz der Klasse aufruft, müssen diese AUCH static sein.
+
 ### Character
 Einzelne Zeichen werden in Java durch den Datentyp char dargestellt. Er repräsentiert ein Unicode-Zeichen mit der Länge 16 bit. Wird einer Variable vom Typ char eine Konstante (auch Literal genannt) zugewiesen, muss diese in einfachen Anführungszeichen stehen.
 

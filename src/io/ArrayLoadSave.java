@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
+import java.util.Arrays;
 import java.util.Random;
 import java.io.Console;
 
@@ -20,9 +21,11 @@ public class ArrayLoadSave {
 	
 	public String printArray(int[] array) {
 		String result = "";
-		for (int ii: array){
-			result = result + String.valueOf(ii) + "\n";
-		}
+		result = Arrays.toString(array);
+		
+//		for (int ii: array){
+//			result = result + String.valueOf(ii) + "\n";
+//		}
 		return result;
 	}
 
@@ -41,7 +44,7 @@ public class ArrayLoadSave {
 			out = new FileWriter(fileName); // Writer <- IS-A <- FileWriter					
 			for (int ii:arr1){
 				out.write(ii);	
-				System.out.println(ii);
+				// System.out.println(ii);
 			}			
 			out.flush();
 					
@@ -163,8 +166,8 @@ public class ArrayLoadSave {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayLoadSave arrayLoadSave = new ArrayLoadSave();
-		// arrayLoadSave.batch();
-		arrayLoadSave.interactive();
+		arrayLoadSave.batch();
+		//arrayLoadSave.interactive();
 
 	}
 
