@@ -10,7 +10,7 @@ public class AbfahrtZeiten {
 
 	Set<String> abfahrtzeitenSet = new TreeSet<String>();
 	SimpleDateFormat format1 = new SimpleDateFormat("HH:mm");  
-	
+	  
 	
 	/*
 	 *  - Generieren Sie bitte die Abfahrtzeiten für eine Buslinie von einer Haltestelle:
