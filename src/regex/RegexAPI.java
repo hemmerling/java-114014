@@ -44,6 +44,16 @@ public class RegexAPI {
 		result = regexApi.ausgabe("a_b_c", "[abc]"); 
 		System.out.println(result);
 
+		result = regexApi.ausgabe("a_b_c_ä_ü_ö_ß", "[A-Za-zöÖäÄüÜß]"); 
+		System.out.println(result);
+
+		result = regexApi.ausgabe("bla <p> MyHTMLTag</p> bla", "<p>.*</p>"); 
+		System.out.println(result);
+		result = regexApi.ausgabe("bla <p>MyHTMLTag</p> bla", "<p>.*</p>"); 
+		System.out.println(result);
+		result = regexApi.ausgabe("bla <p></p> bla", "<p>.*</p>"); 
+		System.out.println(result);
+
 	}
 
 }
