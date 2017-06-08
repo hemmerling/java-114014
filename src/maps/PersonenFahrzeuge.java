@@ -4,6 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+/*
+ *  Todo 2017-06-08:
+ *   - Die Zuordnungen in eine TreeMap kopieren, die TreeMap ausgeben
+ *   - Eine weitere Map anlegen, in der einer Person mehrere Autios zugeordnet werden können. Testen
+ */
+
 public class PersonenFahrzeuge {
 
 	public String print1(Map<PersonNotForHashMap, Auto> map){
