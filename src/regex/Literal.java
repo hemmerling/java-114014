@@ -9,8 +9,12 @@ public class Literal {
 	boolean isDecimalLiteral(String text) {
 		boolean result = false;
 
-		String lit1 ="^\\+*\\-*[0-9][0-9]\\z";
-				
+		String lit1;
+		//lit1 ="^\\+*\\-*[0-9][0-9]\\z";
+		//lit1 ="^\\+*\\-*[0-9]*\\z";
+		//lit1 ="^\\+*\\-*[0-9]+\\z";
+		lit1 ="^[\\+\\-]?[0-9]+\\z";
+		
 		Pattern p = Pattern.compile(lit1);		
 		Matcher m = p.matcher(text);
 		result = m.find(); 
