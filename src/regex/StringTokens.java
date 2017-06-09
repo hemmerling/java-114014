@@ -47,7 +47,11 @@ public class StringTokens {
 		 */
 		
 		str = "Mo. Di. Mi.";
+		
+		// Alternativen:
 		regex = "\\.\\s*";
+		//regex = "\\.\\s?";
+		//regex = "\\. ?";
 		
 		tokens = str.split(regex);
 		for (String subStr : tokens) {
