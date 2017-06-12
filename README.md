@@ -1,7 +1,7 @@
 # java-114014
 java-114014
 
-## 2017-04-11
+## Tips & Tricks
 ### Oracle's Prüfung 
 basiert darauf, dass der Prüflung den Compiler spielt, und sonst vom Compiler gefundene Fehler selber findet...
 
@@ -58,4 +58,17 @@ Welche Methode gibt es in den Klassen "BufferedReader", "BufferedWriter", die es
 
 ### Collections
 Eine gute Klassen-Übersicht über die "Collections" Unterklassen ist im SCJP-Buch auf Seite 558 zu finden.
+
+## Kathy Sierra: SCJP
+### S.3 Inheritance ###
+Inheritance = Vererbung
+
+### S.17 Abstract Class ###
+Notice that the methods marked abstract end in a semicolon rather than curly braces.
+
+Look for questions with a method declaration that ends with a semicolon, rather
+than curly braces. If the method is in a class—as opposed to an interface—then both
+the method and the class must be marked abstract.
+
+
 
