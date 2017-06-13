@@ -59,6 +59,24 @@ Welche Methode gibt es in den Klassen "BufferedReader", "BufferedWriter", die es
 ### Collections
 Eine gute Klassen-Übersicht über die "Collections" Unterklassen ist im SCJP-Buch auf Seite 558 zu finden.
 
+## Klausurvorbereitung ##
+- primitive Datentypen (auch Zuweisungen damit)
+- Vergleichsoperatoren, aritmetische Operatoren, logische Operatoren
+- Kontrollstrukturen (Keywords, auch break und continue)
+- einfache Arrays
+- Objekte, Referenzen, Klassen, lokale Variable, Attribute unterscheiden
+- Sichtbarkeiten
+- Klasse String (Methoden)
+- Vererbung
+- Interface Comparable
+- Wrapperklassen (Autoboxing, Konstantenpool)
+- Casting von Referenztypen
+- innere statische und nichtstatische Klassen
+- Reader/Writer richtig öffnen/schliessen
+- Regeln fürs Serialisieren
+- Collections (Vererbungshierarchie)
+- Zuweisungen der generischen Variablen
+	
 ## Kathy Sierra: SCJP
 ### S.3 Inheritance ###
 Inheritance = Vererbung
@@ -70,5 +88,7 @@ Look for questions with a method declaration that ends with a semicolon, rather
 than curly braces. If the method is in a class—as opposed to an interface—then both
 the method and the class must be marked abstract.
 
-
-
+### S.20 Interfaces ###
+- All interface methods are implicitly `public` and `abstract`. In other words, you do not need to actually type the public or abstract modifiers in the method declaration, but the method is still always public and abstract.
+- All variables defined in an interface must be `public`, `static`, and `final`— in other words, interfaces can declare only constants, not instance variables.
+- Because interface methods are abstract, they cannot be marked final, strictfp, or native. (More on these modifiers later.)
