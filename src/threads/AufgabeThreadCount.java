@@ -11,11 +11,6 @@ public class AufgabeThreadCount {
 		static int count;
 		
 		static class Increment implements Runnable {
-			Thread sleepingThread;
-			
-			public Increment(Thread sleepingThread) {
-				this.sleepingThread = sleepingThread;
-			}
 
 			@Override
 			public void run() {
@@ -23,17 +18,11 @@ public class AufgabeThreadCount {
 					count++;
 				}
 				
-				sleepingThread.interrupt(); //Nachricht mit InterruptedException senden
 			}
 
 		}
 		
 		static class Decrement implements Runnable {
-			Thread sleepingThread;
-				
-			public Decrement(Thread sleepingThread) {
-				this.sleepingThread = sleepingThread;
-			}
 
 			@Override
 			public void run() {
@@ -41,16 +30,15 @@ public class AufgabeThreadCount {
 					count--;
 				}
 					
-				sleepingThread.interrupt(); //Nachricht mit InterruptedException senden
 			}
 
 		}
 		
 		
-		public static void main(String[] args) {
+		public static void main(String[] args) throws InterruptedException {
 			
-			Increment target1 = new Increment( Thread.currentThread() );
-			Decrement target2 = new Decrement( Thread.currentThread() );
+			Increment target1 = new Increment( );
+			Decrement target2 = new Decrement();
 			
 			Thread th1 = new Thread(target1);
 			th1.start(); // ab hier: 2 Threads
@@ -58,14 +46,9 @@ public class AufgabeThreadCount {
 			Thread th2 = new Thread(target2);
 			th2.start(); // ab hier: 3 Threads
 
-			try {
 				th1.join(); 
 				th2.join(); 
-				
-			} catch (InterruptedException e) {
-				System.out.println("main hat die Nachricht zum Weiterlaufen bekommen");
-			}
-			
+							
 			System.out.println("count: " + count);
 			
 		}
