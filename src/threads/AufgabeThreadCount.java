@@ -6,7 +6,11 @@ public class AufgabeThreadCount {
 	 Bitte einen Extra-Thread starten, der die statische Variable `count` in einer 
 	 for-Schleife 1 Mio. mal um eins inkrementiert. Bitte in der main den Wert 
 	 der Variable ausgeben.
-	 */
+
+	 Bitte einen Extra-Thread starten, der die statische Variable `count` in einer 
+	 for-Schleife 1 Mio. mal um eins dekrementiert. Bitte in der main den Wert 
+	 der Variable ausgeben.
+*/
 
 		static int count;
 		
