@@ -122,9 +122,7 @@ public class AufgabePhilosophen {
 
 		List <Runnable> runnableList = null;
 		List <Thread> threadList = null;
-		List <Object> gabelList = new ArrayList<Object>(Arrays.asList(new Object(), 
-				  new Object(), 
-				  new Object()));
+		List <Object> gabelList = new ArrayList<Object>();
 		
 		int anzahl = 3;
 		AufgabePhilosophen aufgabePhilosophen = new AufgabePhilosophen();
@@ -134,7 +132,16 @@ public class AufgabePhilosophen {
 
 		Object linkeGabel = new Object();
 		Object rechteGabel = new Object();
-	
+
+		/* 
+		 * Begrenzte Ressourcen erzeugen
+		 * Anzahl der Philosophen = Anzahl der Gabeln
+		 * 
+		 */
+		for(int ii = 0; ii<anzahl;ii++){
+			gabelList.add(new Object());
+		};
+		
 		for(int ii = 0; ii<anzahl;ii++){
 			Philosoph philosoph = philosophen.getPhilosophen().get(ii);
 			System.out.println(philosoph);
@@ -150,11 +157,6 @@ public class AufgabePhilosophen {
 			Thread thread = new Thread(runnable);
 			thread.start();
 		}
-		
-//		Philosoph philosoph = new Philosoph("Heraklit");
-//		Runnable runnable = new TagesAblauf(philosoph);		
-//		Thread p1 = new Thread(runnable);
-//		p1.start();
 		
 		// TODO Auto-generated method stub
 
