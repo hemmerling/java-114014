@@ -20,11 +20,11 @@ class Person implements Runnable {
 	}
 	
 	public void einkaufen() {
-		int gewuenschteBroetchenZahl = MIN + randomGenerator.nextInt(MAX-MIN); 
+		int gewuenschteBroetchenZahl = MIN + randomGenerator.nextInt(MAX-MIN+1); 
 		int erhalteneBroetchen = 
 				lieblingsBaeckerei.verkaufeBroetchen(gewuenschteBroetchenZahl);
 		if (erhalteneBroetchen>0) {
-			System.out.println("Einkauf, Wunsch:" + gewuenschteBroetchenZahl + 
+			System.out.println("Einkauf bei " + lieblingsBaeckerei.toString() + ", Wunsch:" + gewuenschteBroetchenZahl + 
 		            ", Lieferung:" + erhalteneBroetchen);		
 		} else {
 			System.out.println("Erfolgloser Einkauf");
@@ -87,6 +87,7 @@ public class Baeckerei implements Runnable {
 			} else {
 				this.produzierteBroetchen = this.lagerKapazitaet;
 			}
+			//monitor.notifyAll();
 			monitor.notify();
 		}
 		System.out.println(this.toString());			
