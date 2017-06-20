@@ -59,6 +59,16 @@ Welche Methode gibt es in den Klassen "BufferedReader", "BufferedWriter", die es
 ### Collections
 Eine gute Klassen-Übersicht über die "Collections" Unterklassen ist im SCJP-Buch auf Seite 558 zu finden.
 
+### Inner Classes
+Eine Innere Klasse muss/kann eine beliebige Klasse oder Interface erweitern ( class A extends B {}; class A implements I {};
+
+### Binary Compliment
+ Das binäre Komplement von 127 ist -128, das von 1 ist -2.
+ x = 127;
+ x=~x;
+ System.out.println(x)
+ -128 
+
 ## Klausurvorbereitung ##
 - primitive Datentypen (auch Zuweisungen damit)
 - Vergleichsoperatoren, aritmetische Operatoren, logische Operatoren
