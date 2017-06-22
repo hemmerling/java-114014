@@ -82,8 +82,8 @@ Eine Innere Klasse muss/kann eine beliebige Klasse oder Interface erweitern ( cl
 - Wrapperklassen (Autoboxing, Konstantenpool)
 - Casting von Referenztypen
 - innere statische und nichtstatische Klassen
-- Reader/Writer richtig öffnen/schliessen
-- Regeln fürs Serialisieren
+- Reader/Writer richtig öffnen/schliessen ## Nachholbedarf ##
+- Regeln fürs Serialisieren ## Nachholbedarf ##
 - Collections (Vererbungshierarchie)
 - Zuweisungen der generischen Variablen
 	
@@ -102,3 +102,17 @@ the method and the class must be marked abstract.
 - All interface methods are implicitly `public` and `abstract`. In other words, you do not need to actually type the public or abstract modifiers in the method declaration, but the method is still always public and abstract.
 - All variables defined in an interface must be `public`, `static`, and `final`— in other words, interfaces can declare only constants, not instance variables.
 - Because interface methods are abstract, they cannot be marked final, strictfp, or native. (More on these modifiers later.)
+
+## OCPJP6_2014
+### Zeilennumerierung
+- Zeilennumerierung beginnend mit 1 => Vollständige Java-Datei, import-Angaben müssen stimmen
+- Keine Zeilennumerierung, oder Zeilennumerierung startet mit Zeile>1 => unvollständiger Code, eventuell zusätzliche Import-Angaben irrelevant für Fragestellung
+## Konstruktoren, super
+- Konstruktoren werden nicht vererbt.
+- Wenn es existiert, wird ein explizites super() mit eventuellen Parametern statt super() ohne Parameter aufgerufen
+## Cohesion ##
+- High cohesion is when you have a class that does a well defined job. 
+- Low cohesion is when a class does a lot of jobs that don't have much in common.
+## Coupling
+- Tight coupling is when a group of classes are highly dependent on one another. 
+- Loose coupling is achieved by means of a design that promotes single-responsibility and separation of concerns.C### Exam BQ1?, Q4? ?### Exam CQ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,229

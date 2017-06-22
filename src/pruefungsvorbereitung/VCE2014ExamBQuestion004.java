@@ -4,7 +4,7 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class Vce2014B04 {
+public class VCE2014ExamBQuestion004 {
 	
 	public static void main(String[] args) {
 		Date date = new Date();
