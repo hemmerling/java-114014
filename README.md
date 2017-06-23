@@ -115,4 +115,14 @@ the method and the class must be marked abstract.
 - Low cohesion is when a class does a lot of jobs that don't have much in common.
 ## Coupling
 - Tight coupling is when a group of classes are highly dependent on one another. 
-- Loose coupling is achieved by means of a design that promotes single-responsibility and separation of concerns.C### Exam BQ1?, Q4? ?### Exam CQ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,229
+- Loose coupling is achieved by means of a design that promotes single-responsibility and separation of concerns.C
+## NumberFormat, Date ( Exam C, Q23 + Q24 )
+- NumberFormat nf  = nf.format (input )
+- String ds = "December 15, 2004"; DateFormat df = df.parese ( ds );
+## StringBuilder, String ( Exam C, Q28 )
+22. - StringBuilder sb1 = new StringBuilder("123");sb1.append("abc");
+23. - String s1 = "123"; s1 = s1.concat("abc");
+### Exam B
+Q1?, Q4? ?
+### Exam C
+Q 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27, 28, 29,30,31,32,33,34
