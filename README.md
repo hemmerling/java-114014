@@ -122,7 +122,11 @@ the method and the class must be marked abstract.
 ## StringBuilder, String ( Exam C, Q28 )
 22. - StringBuilder sb1 = new StringBuilder("123");sb1.append("abc");
 23. - String s1 = "123"; s1 = s1.concat("abc");
+## try-catch-finally ( Exam C, Q35 )
+- Finally wird immer durchlaufen, egal ob es eine Exception gab, oder gar eine zweite Exception in einem Catch-Block
+## Assertions ##
+- VM-Parameter "-enableassertions" muss in den Eclipse-Projekt-Settings für die Java-Datei angegeben werden
 ### Exam B
 Q1?, Q4? ?
 ### Exam C
-Q 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27, 28, 29,30,31,32,33,34
+Q 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37
