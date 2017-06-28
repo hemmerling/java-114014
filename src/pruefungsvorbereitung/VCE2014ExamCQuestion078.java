@@ -33,12 +33,18 @@ class TestFive1 {
 			new Thread() {
 				public void run() {
 					foo();
+					try {
+					sleep(100);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 					//System.out.print(x + ", ");
 				} }.start();
 		} }
 }
 
-// Nicht die richtige Lösung, funktioniert aber:
+//Nicht die richtige Lösung: Spätestens nach Einfügen von sleep() sieht man's
 // change line 7 to public synchronized void go() {
 class TestFive2 {
 	private int x;
@@ -51,6 +57,12 @@ class TestFive2 {
 			new Thread() {
 				public void run() {
 					foo();
+					try {
+						sleep(100);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					System.out.print(x + ", ");
 				} }.start();
 		} }
@@ -69,12 +81,18 @@ class TestFive3 {
 			new Thread() {
 				public void run() {
 					foo();
+					try {
+						sleep(100);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					System.out.print(x + ", ");
 				} }.start();
 		} }
 }
 
-// Nicht die richtige Lösung, funktioniert aber::
+//Nicht die richtige Lösung: Spätestens nach Einfügen von sleep() sieht man's
 // wrap the for loop code inside the go() method with a synchronized block synchronized(this) { // for loop code here } 
 class TestFive4 {
 	private int x;
@@ -88,6 +106,12 @@ class TestFive4 {
 				new Thread() {
 					public void run() {
 						foo();
+						try {
+							sleep(100);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 						System.out.print(x + ", ");
 					} }.start();
 			} }
@@ -100,7 +124,7 @@ public class VCE2014ExamCQuestion078 {
 		//testFive0.go();
 		System.out.println("\n"+"*********************");
 		TestFive1 testFive1 = new TestFive1();
-		//testFive1.go();
+		testFive1.go();
 		System.out.println("\n"+"*********************");
 		TestFive2 testFive2 = new TestFive2();
 		//testFive2.go();
@@ -109,6 +133,6 @@ public class VCE2014ExamCQuestion078 {
 		//testFive3.go();
 		System.out.println("\n"+"*********************");
 		TestFive4 testFive4 = new TestFive4();
-		testFive4.go();
+		//testFive4.go();
 	}
 }

@@ -87,6 +87,8 @@ Eine Innere Klasse muss/kann eine beliebige Klasse oder Interface erweitern ( cl
 - Collections (Vererbungshierarchie)
 - Zuweisungen der generischen Variablen
 	
+- weitere Schwachpunkte: format,..
+
 ## Kathy Sierra: SCJP
 ### S.3 Inheritance ###
 Inheritance = Vererbung
@@ -116,24 +118,30 @@ the method and the class must be marked abstract.
 ## Coupling
 - Tight coupling is when a group of classes are highly dependent on one another. 
 - Loose coupling is achieved by means of a design that promotes single-responsibility and separation of concerns.C
-## NumberFormat, Date ( Exam C, Q23 + Q24 )
+## NumberFormat, Date ( VCE2014, Exam C, Q23 + Q24 )
 - NumberFormat nf  = nf.format (input )
 - String ds = "December 15, 2004"; DateFormat df = df.parese ( ds );
-## StringBuilder, String ( Exam C, Q28 )
+## StringBuilder, String ( VCE2014, Exam C, Q28 )
 22. - StringBuilder sb1 = new StringBuilder("123");sb1.append("abc");
 23. - String s1 = "123"; s1 = s1.concat("abc");
-## try-catch-finally ( Exam C, Q35 )
+## try-catch-finally ( VCE2014, Exam C, Q35 )
 - Finally wird immer durchlaufen, egal ob es eine Exception gab, oder gar eine zweite Exception in einem Catch-Block
 ## Assertions ##
 - VM-Parameter "-enableassertions" muss in den Eclipse-Projekt-Settings für die Java-Datei angegeben werden
 ## hashCode ##
 java.util.HashSet
-Exam C, Q40, Q41, siehe Dozent - Collections/src/whl.hascolls
-Exam C, Q40: Methode "equals" wird überladen ( "overloaded" ), nicht überschrieben ( "override" ). 
+VCE2014, Exam C, Q40, Q41, siehe Dozent - Collections/src/whl.hascolls
+VCE2014, Exam C, Q40: Methode "equals" wird überladen ( "overloaded" ), nicht überschrieben ( "override" ). 
 ## super ##
 - Statische Methoden nehmen nicht am Polymorphismus teil => "Cannot use super in a static context" :-(
+## JavaBean Listener Naming Rules ##
+- public void add<ListenerType>(<ListenerType> listener),
+- public void remove<ListenerType>(<ListenerType> listener)
+## Innere Klassen ansprechen ( VCE2014, ExamC, Q91 ) ##
+- Line.Point p = new Line.Point(); //statische Klasse Point()
+- Line.Point2 p1 = l.new Point2(); //dynamische Klasse Point2()
+- Line.Point2 p2 = new Line().new Point2(); //dynamische Klasse Point2()
 ### Exam B
 Q1?, Q4? ?
 ### Exam C
-Q 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78
-
+Q 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94 
