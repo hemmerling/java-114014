@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class VCE2014ExamCQuestion108  implements Comparable<Object> {
+public class VCE2014ExamCQuestion108  /*implements Comparable<Object>*/ {
 
 	public static Collection get1() {
 		Collection sorted = new LinkedList();
@@ -30,9 +30,9 @@ public class VCE2014ExamCQuestion108  implements Comparable<Object> {
 		}
 	}
 
-	@Override
-	public int compareTo(Object o) {
-		int result = this.compareTo(o);
-		return result;
-	}
+//	@Override
+//	public int compareTo(Object o) {
+//		int result = this.compareTo(o);
+//		return result;
+//	}
 }
