@@ -1,6 +1,6 @@
 package pruefungsvorbereitung;
 
-public class VCE2014ExamCQuestion99 {
+public class VCE2014ExamCQuestion099 {
 
 	public static void test(String str) {
 		int check = 4;
