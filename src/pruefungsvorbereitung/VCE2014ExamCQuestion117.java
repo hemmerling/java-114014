@@ -2,7 +2,7 @@ package pruefungsvorbereitung;
 
 import java.io.*;
 
-class Tree { }
+class Tree /* implements Serializable */ { }
 
 class Forest implements Serializable {
 	private Tree tree = new Tree();
