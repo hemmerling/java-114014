@@ -87,20 +87,20 @@ Eine Innere Klasse muss/kann eine beliebige Klasse oder Interface erweitern ( cl
 - Collections (Vererbungshierarchie)
 - Zuweisungen der generischen Variablen
 	
-- weitere Schwachpunkte: format,..
+- weitere Schwachpunkte: format, Date+Locale..
 
 ## Kathy Sierra: SCJP
-### S.3 Inheritance ###
+### S.3 Inheritance
 Inheritance = Vererbung
 
-### S.17 Abstract Class ###
+### S.17 Abstract Class
 Notice that the methods marked abstract end in a semicolon rather than curly braces.
 
 Look for questions with a method declaration that ends with a semicolon, rather
 than curly braces. If the method is in a class—as opposed to an interface—then both
 the method and the class must be marked abstract.
 
-### S.20 Interfaces ###
+### S.20 Interfaces
 - All interface methods are implicitly `public` and `abstract`. In other words, you do not need to actually type the public or abstract modifiers in the method declaration, but the method is still always public and abstract.
 - All variables defined in an interface must be `public`, `static`, and `final`— in other words, interfaces can declare only constants, not instance variables.
 - Because interface methods are abstract, they cannot be marked final, strictfp, or native. (More on these modifiers later.)
@@ -109,44 +109,71 @@ the method and the class must be marked abstract.
 ### Zeilennumerierung
 - Zeilennumerierung beginnend mit 1 => Vollständige Java-Datei, import-Angaben müssen stimmen
 - Keine Zeilennumerierung, oder Zeilennumerierung startet mit Zeile>1 => unvollständiger Code, eventuell zusätzliche Import-Angaben irrelevant für Fragestellung
-## Konstruktoren, super
+
+### Konstruktoren, super
 - Konstruktoren werden nicht vererbt.
 - Wenn es existiert, wird ein explizites super() mit eventuellen Parametern statt super() ohne Parameter aufgerufen
-## Cohesion ##
+
+### Cohesion
 - High cohesion is when you have a class that does a well defined job. 
 - Low cohesion is when a class does a lot of jobs that don't have much in common.
-## Coupling
+
+### Coupling
 - Tight coupling is when a group of classes are highly dependent on one another. 
 - Loose coupling is achieved by means of a design that promotes single-responsibility and separation of concerns.C
-## NumberFormat, Date ( VCE2014, Exam C, Q23 + Q24 )
+
+### NumberFormat, Date ( VCE2014, Exam C, Q23 + Q24 )
 - NumberFormat nf  = nf.format (input )
 - String ds = "December 15, 2004"; DateFormat df = df.parese ( ds );
-## StringBuilder, String ( VCE2014, Exam C, Q28 )
+
+### StringBuilder, String ( VCE2014, Exam C, Q28 )
 22. - StringBuilder sb1 = new StringBuilder("123");sb1.append("abc");
 23. - String s1 = "123"; s1 = s1.concat("abc");
-## try-catch-finally ( VCE2014, Exam C, Q35 )
+
+### try-catch-finally ( VCE2014, Exam C, Q35 )
 - Finally wird immer durchlaufen, egal ob es eine Exception gab, oder gar eine zweite Exception in einem Catch-Block
-## Assertions ##
+
+### Assertions ##
 - VM-Parameter "-enableassertions" muss in den Eclipse-Projekt-Settings für die Java-Datei angegeben werden
-## hashCode ##
+
+### hashCode ##
 java.util.HashSet
 VCE2014, Exam C, Q40, Q41, siehe Dozent - Collections/src/whl.hascolls
 VCE2014, Exam C, Q40: Methode "equals" wird überladen ( "overloaded" ), nicht überschrieben ( "override" ). 
-## super ##
+
+### super ##
 - Statische Methoden nehmen nicht am Polymorphismus teil => "Cannot use super in a static context" :-(
-## JavaBean Listener Naming Rules ##
+
+### JavaBean Listener Naming Rules ##
 - public void add<ListenerType>(<ListenerType> listener),
 - public void remove<ListenerType>(<ListenerType> listener)
-## Innere Klassen ansprechen ( VCE2014, ExamC, Q91 ) ##
+
+### Innere Klassen ansprechen ( VCE2014, ExamC, Q91 ) ##
 - Line.Point p = new Line.Point(); //statische Klasse Point()
 - Line.Point2 p1 = l.new Point2(); //dynamische Klasse Point2()
 - Line.Point2 p2 = new Line().new Point2(); //dynamische Klasse Point2()
-## AssertionError() ##
+
+### AssertionError() ##
 - "throw new AssertionError();" => Es wird ein Error geworfen, keine Exception. Error ist Throwable. 
 AssertionError() ist nicht durch try/catch abfangbar!
+
+### Date ##
+
+- Date 1/2
+
+Locale loc = Locale.getDefault();
+System.out.println(loc.getDisplayCountry()+ " " + df.format(d));
+
+- Date 2/2
+
+DateFormat df;
+Date date = new Date();
+df = DateFormat.getInstance();
+
 ### Exam B
 Q1?, Q4? ?
+
 ### Exam C
-Q 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 
+Q 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117?
 
 226, 228
