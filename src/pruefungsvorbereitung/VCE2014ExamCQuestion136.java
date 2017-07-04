@@ -26,7 +26,7 @@ class Triangle {
 	}
 }
 
-public class VCE2014ExcamCQuestion136 {
+public class VCE2014ExamCQuestion136 {
 	public static void main(String[] args) {
 	}
 }
