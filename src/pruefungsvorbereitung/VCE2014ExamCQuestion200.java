@@ -2,6 +2,10 @@ package pruefungsvorbereitung;
 import java.io.*;
 
 class Animal {
+	int x;
+	// Bei der Deserialisierung von Beagle() können durch den Aufruf des Konstruktors 
+	// durch die JVM nur in der nicht serialisierbaren Klasse Animal() definierte Werte 
+	// initialisiert werden
 	Animal() { System.out.print("a"); }
 }
 
@@ -70,7 +74,7 @@ public class VCE2014ExamCQuestion200 {
 		VCE2014ExamCQuestion200 test = new VCE2014ExamCQuestion200();
 		test.beagle = new Beagle(); // "ad"
 		test.write2();
-		test.read2(); / "a"
+		test.read2(); // "a"
 	}
 }
 
