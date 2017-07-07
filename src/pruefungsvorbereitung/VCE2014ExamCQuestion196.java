@@ -4,7 +4,7 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class VCE2014ExcamCQuestion196 {
+public class VCE2014ExamCQuestion196 {
 	public static void main(String[] args) {
 		Date date = new Date();
 		Locale locale = Locale.ITALY;

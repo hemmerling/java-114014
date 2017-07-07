@@ -1,6 +1,6 @@
 package pruefungsvorbereitung;
 
-public class VCE2014ExcamCQuestion185 {
+public class VCE2014ExamCQuestion185 {
 
 	public static void main1(String...a) {
 		System.out.println("hi");
