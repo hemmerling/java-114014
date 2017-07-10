@@ -9,12 +9,12 @@ class Explorer3 {
 			if(i%2 == 0) s.add(i);
 		subs = (TreeSet)s.subSet(608, true, 611, true);
 		System.out.println(s + " " + subs);
-		//s.add(629);
+		s.add(629);
+		System.out.println(s + " " + subs);
 		subs.add(611);
 		System.out.println(s + " " + subs);
-		subs.add(612);
+		//subs.add(612); // java.lang.IllegalArgumentException: key out of range
 		//subs.add(629);
-		System.out.println(s + " " + subs);
 	}
 }
 

@@ -31,11 +31,14 @@ class Object2 extends Object {
 
 class Hancock4 {
 	// insert code here 
-	public void addStrings(List<? extends Object> list) {
-		Object2 obj2 = new Object2();
-//		list.add("foo");
-		list = null;
-		list.add(obj2);
+	public void addStrings(List<? extends String> list) {
+		// list.add("foo");
+	}
+	public void addNumbers(List<? extends Number> list) {
+		for (Number number:list) {
+			System.out.println(number);
+		}
+//		list.add(43);
 	}
 }
 
